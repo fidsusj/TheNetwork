@@ -1,0 +1,17 @@
+div.login-container {
+    width: 600px;
+    margin: auto;
+}
+div.change-info-form {
+    vertical-align: middle;
+}
+div.change-info-form input{
+    width: auto;
+    display: inline;
+}
+div.change-info-form label{
+    width: auto;
+}
+hr.top-hr{
+   border: 2px solid var(--color-black);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="../" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/default.style.css">
+    <link rel="stylesheet" href="css/colors.style.css">
+    <link rel="stylesheet" href="css/typo.style.css">
+    <link rel="stylesheet" href="css/form.style.css">
+    <link rel="stylesheet" href="css/structure.style.css">
+    <link rel="stylesheet" href="css/login.register.style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script type="text/javascript" src="js/classes/AJAXRequest.js"></script>
+    <script type="text/javascript" src="js/classes/Cookie.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="login-container">
+
+            <h1>Login</h1>
+
+            <p>Please enter your credentials to login.</p>
+            <hr>
+            <div class="login-form">
+                <p id="error-message"></p>
+                <input type="text" placeholder="Email" id="login-email" class="text-edit">
+                <input type="password" placeholder="Password" id="login-password" class="text-edit">
+
+                <button id="login-btn" class="colored-button">Login</button>
+                <a href="register/"><button>Register</button></a>
+                <div class="clear-float"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <span class="col-third">Prof. Dr. Roethig</span>
+        <span class="col-third">Webengeneering and Project management </span>
+        <span class="col-third">The Network</span>
+    </div>
+</body>
+</html>

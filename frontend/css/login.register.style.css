@@ -1,0 +1,18 @@
+/* used for styling login and register page */
+
+div.login-container {
+    width: 350px;
+    margin: auto;
+}
+
+div.login-container h1, div.login-container p {
+    text-align: center;
+}
+
+div.login-container button {
+    float:right
+}
+
+#error-message {
+    color: var(--color-error);
+}

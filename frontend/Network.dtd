@@ -1,0 +1,38 @@
+<!DOCTYPE Network [
+
+        <!ELEMENT network (users, connections, skills)>
+        <!ELEMENT users (user+)>
+        <!ELEMENT user (userid, registered, signedin, email, name, surname, birthdate, department, skillassignments)>
+        <!ELEMENT registered (#PCDATA)>
+        <!ELEMENT signedin (#PCDATA)>
+        <!ELEMENT userid (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT name (#PCDATA))>
+        <!ELEMENT surname (#PCDATA)>
+        <!ELEMENT birthdate (#PCDATA)>
+        <!ELEMENT department (#PCDATA)>
+        <!ELEMENT skillassignments (skillassignment)>
+        <!ELEMENT skillassignment EMPTY>
+
+
+        <!ELEMENT connections (connection+)>
+        <!ELEMENT connection (connectionid, fromid, toid, category, acquaintance, acquaintanceat)>
+        <!ELEMENT connectionid (#PCDATA)>
+        <!ELEMENT fromid (#PCDATA)>
+        <!ELEMENT toid (#PCDATA)>
+        <!ELEMENT category (#PCDATA)>
+        <!ELEMENT acquaintance (#PCDATA)>
+        <!ELEMENT acquaintanceat (#PCDATA)>
+
+
+        <!ELEMENT skills (skill+)>
+        <!ELEMENT skill (skillid, skillname)>
+        <!ELEMENT skillname (#PCDATA)>
+        <!ELEMENT skillid (#PCDATA)>
+
+
+
+        <!ATTLIST skillassignment id IDREF #REQUIRED>
+        <!ATTLIST skillassignment level CDATA #REQUIRED>
+
+        ]>

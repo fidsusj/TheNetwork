@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="../"/>
+    <title>Account Management</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <link rel="stylesheet" href="css/default.style.css">
+    <link rel="stylesheet" href="css/colors.style.css">
+    <link rel="stylesheet" href="css/typo.style.css">
+    <link rel="stylesheet" href="css/form.style.css">
+    <link rel="stylesheet" href="css/structure.style.css">
+    <link rel="stylesheet" href="css/login.register.style.css">
+    <link rel="stylesheet" href="css/accountManagement.style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="js/classes/AJAXRequest.js"></script>
+    <script type="text/javascript" src="js/classes/Cookie.js"></script>
+    <script type="text/javascript" src="js/account.js"></script>
+</head>
+<body>
+<div id="header" style="padding: 0"></div>
+<div id="main">
+    <div class="login-container">
+
+        <h1>Change your personal information</h1>
+        <p>Please click on edit to change your information.</p>
+        <hr class="top-hr">
+        <a href="" style="text-align: right; display: inline-block;">
+            <button>Back</button>
+        </a>
+        <table>
+            <!-- skills section -->
+            <tr>
+                <td>
+                    <label>Skills:</label>
+                </td>
+                <td>
+                    <table id="skill_table"></table>
+                </td>
+            </tr>
+            <tr>
+                <td/>
+                <td><p id="skills-error" align="center"></p></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-black)">
+                <td>
+                    <label>Add skill:</label>
+                </td>
+                <td colspan="3">
+                    <select style="width: 55%; display: inline-block" id="skill_option">
+                        <option value="default">Skill...</option>
+                    </select>
+                    <select style="width: 25%; display: inline-block" id="skill_level_option">
+                        <option value="default">Level</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button id="addSkill-btn" class="icon-button" style="margin-top: 15px"><span
+                            class="fas fa-plus"></span></button>
+                </td>
+            </tr>
+            <!-- profile section -->
+            <tr>
+                <td><label>Password:</label></td>
+                <td>
+                    <button id="change-pw-btn" class="colored-button">Change Password</button>
+                </td>
+                <td align="center">
+                    <label>Profile picture:</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input id="name-input"></td>
+                <td rowspan="4" align="right">
+                    <img id="file-select-preview" width="150px" height="150px"/>
+                    <input type="file" id="file-select" name="photos[]" style="margin-top: 20px; width: 150px"
+                           accept="image/*"/>
+                    <button type="submit" id="upload-button" class="colored-button" style="margin-bottom: 50px">Upload
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Surname:</label></td>
+                <td><input id="surname-input"></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input id="email-input" type="email"></td>
+            </tr>
+            <tr>
+                <td><label>Department:</label></td>
+                <td><input id="department-input"></td>
+            </tr>
+            <tr>
+                <td><label>Birthday:</label></td>
+                <td><input id="birthday-input" type="date"></td>
+            </tr>
+            <tr>
+                <td/>
+                <td>
+                    <p id="error-message"></p>
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-black)">
+                <td colspan="2"/>
+                <td>
+                    <button id="change-info-btn" class="colored-button">Save changes</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td>
+                    <a href="">
+                        <button>Back</button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="footer">
+    <span class="col-third">Prof. Dr. Roethig</span>
+    <span class="col-third">Webengeneering and Project management </span>
+    <span class="col-third">The Network</span>
+</div>
+</body>
+</html>

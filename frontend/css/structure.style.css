@@ -1,0 +1,45 @@
+/* used for page structure and layout */
+
+.clear-float {
+    clear: both;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    font-size: 16px;
+    border-radius: 2px;
+    vertical-align: top;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.col-third {
+    width: 33.3%;
+    box-sizing: border-box;
+    float: left;
+}
+
+#footer {
+    width: 100%;
+    display: block;
+    height: 30px;
+    background: var(--main-color);
+    color: var(--color-white);
+    position: fixed;
+    bottom: 0;
+    padding-top: 6px;
+}
+
+#footer .col-third {
+    text-align: center;
+}

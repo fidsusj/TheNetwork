@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="../" />
+    <title>Register</title>
+
+    <link rel="stylesheet" href="css/default.style.css">
+    <link rel="stylesheet" href="css/colors.style.css">
+    <link rel="stylesheet" href="css/typo.style.css">
+    <link rel="stylesheet" href="css/form.style.css">
+    <link rel="stylesheet" href="css/structure.style.css">
+    <link rel="stylesheet" href="css/login.register.style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/classes/AJAXRequest.js"></script>
+    <script type="text/javascript" src="js/classes/Cookie.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+</head>
+<body>
+    <main>
+        <div class="login-container">
+
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <div class="login-form">
+                <p id="error-message"></p>
+                <input type="text" placeholder="Name" id="register-fist-name" />
+                <input type="text" placeholder="Surname" id="register-last-name" />
+                <input type="email" placeholder="Email" id="register-email"  />
+                <input type="text" placeholder="Department" id="register-department"  />
+                <input type="date" placeholder="YYYY-MM-DD" id="register-birthday"  />
+                <input type="password" placeholder="Password" id="register-password" />
+                <input type="password" placeholder="Repeat Password" id="register-repeat-password">
+
+                <!--<label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>-->
+
+                <button id="register-btn" class="colored-button">Sign Up</button>
+                <a href="login/"><button>Back</button></a>
+                <div class="clear-float"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer">
+        <span class="col-third">Prof. Dr. Roethig</span>
+        <span class="col-third">Webengeneering and Project management </span>
+        <span class="col-third">The Network</span>
+    </div>
+</body>
+</html>

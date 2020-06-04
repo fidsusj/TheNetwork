@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <base href="./"/>
+    <title>The Network</title>
+
+    <!-- JAVASCRIPT -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+    <script type="text/javascript" src="js/classes/AJAXRequest.js"></script>
+    <script type="text/javascript" src="js/classes/Cookie.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="https://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+
+    <!-- STYLESHEETS -->
+
+    <link rel="stylesheet" href="css/default.style.css">
+    <link rel="stylesheet" href="css/colors.style.css">
+    <link rel="stylesheet" href="css/typo.style.css">
+    <link rel="stylesheet" href="css/form.style.css">
+    <link rel="stylesheet" href="css/structure.style.css">
+    <link rel="stylesheet" href="css/main.style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+</head>
+<body>
+<div id="header">
+    <div class="searchbar-container">
+        <button id="searchbar-select-btn" class="input-button"><span class="fas fa-angle-down"></span></button>
+        <input type="text" id="searchbar-input" placeholder="Search ..."/>
+        <table id="searchbar-select-table" class="searchbar-select" hidden>
+            <tr class="searchbar-select">
+                <th colspan="2">
+                    <label class="searchbar-select" id="searchbar-select-header">Select category:</label>
+                </th>
+            </tr>
+            <tr class="searchbar-select">
+                <td>
+                    <input class="searchbar-select" type="radio" id="searchbar-select-name" name="search-select"
+                           value="searchNameInContacts" checked="checked">
+                </td>
+                <td>
+                    <label class="searchbar-select" for="searchbar-select-name">Name</label>
+                </td>
+            </tr>
+            <tr class="searchbar-select">
+                <td>
+                    <input class="searchbar-select" type="radio" id="searchbar-select-department" name="search-select"
+                           value="searchDepartmentInContacts">
+                </td>
+                <td>
+                    <label class="searchbar-select" for="searchbar-select-department">Department</label>
+                </td>
+            </tr>
+            <tr class="searchbar-select">
+                <td>
+                    <input class="searchbar-select" type="radio" id="searchbar-select-skill" name="search-select"
+                           value="searchSkillInContacts">
+                </td>
+                <td>
+                    <label class="searchbar-select" for="searchbar-select-skill">Skill</label>
+                </td>
+            </tr>
+        </table>
+        <table id="searchbar-results"></table>
+        <div class="clear-float"></div>
+    </div>
+
+    <div class="header-buttons-container">
+        <button id="add-connection-btn" class="icon-button"><span class="fas fa-user-plus"></span></button>
+        <button id="account-btn" class="icon-button"><span class="fas fa-user"></span></button>
+        <button id="download-btn" class="icon-button"><span class="fa fa-download"></span></button>
+        <button id="logout-btn" class="icon-button"><span class="fa fa-sign-out-alt"></span></button>
+    </div>
+    <div class="clear-float"></div>
+
+</div>
+<div id="main">
+    <button id="back-btn" class="icon-button"><span class="fas fa-chevron-left"></span></button>
+
+    <div id="website">
+        <div id="content">
+
+        </div>
+        <div id="user-sidebar">
+            <button id="user-sidebar-close-btn" style="background: none"><span class="fas fa-times"></span></button>
+            <h2 style="text-align: center">Personal information</h2>
+            <p id="person-data-error" style="text-align: center; color: var(--color-error)"></p>
+            <p style="text-align: center"><img id="user-sidebar-img"
+                                               src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg"
+                                               width="200px" height="200px"
+                                               style="border-radius: 50%; border: 10px solid var(--main-color)"></p>
+            <div>
+                <table>
+                    <tr>
+                        <td><label>Name:</label></td>
+                        <td><label id="user-sidebar-name">Ich bin eine Sidebar!</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td><label id="user-sidebar-email">Ich bin eine Sidebar!</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Birthday:</label></td>
+                        <td><label id="user-sidebar-birthdate">Ich bin eine Sidebar!</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Department:</label></td>
+                        <td><label id="user-sidebar-department">Ich bin eine Sidebar!</label></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h3 style="text-align: center">Skills</h3>
+                <table id="user-sidebar-skill-table"></table>
+            </div>
+            <div id="connection_div">
+                <h3 style="text-align: center">Connection</h3>
+                <p id="user-sidebar-edit-error" style="text-align: center; color: var(--color-error)"></p>
+                <table>
+                    <tr>
+                        <td><label>Category:</label></td>
+                        <td>
+                            <select class="sidebar-input" id="con-cat">
+                                <option value="business">Business</option>
+                                <option value="private">Private</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Acquaintance:</label></td>
+                        <td><input class="sidebar-input" id="con-acquaintance"/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Date:</label></td>
+                        <td><input type="date" class="sidebar-input" id="con-date"/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="colored-button" id="delete-connection-button">Delete connection</button>
+                        </td>
+                        <td>
+                            <button class="colored-button" id="user-sidebar-edit-btn">Save changes</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <span class="col-third">Prof. Dr. Roethig</span>
+    <span class="col-third">Webengeneering and Project management </span>
+    <span class="col-third">The Network</span>
+</div>
+</body>
+</html>
