@@ -10,7 +10,7 @@
     "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "express": "~4.16.0",
-    "file-type": "^8.0.0",
+    "file-type": "^16.5.4",
     "formidable": "^1.2.1",
     "fs": "0.0.1-security",
     "http-errors": "~1.6.2",
